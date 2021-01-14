@@ -4,14 +4,7 @@ using UnityEngine;
 
 public class GameHandler : MonoBehaviour
 {
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+    private void Update(){
         
     }
 }
