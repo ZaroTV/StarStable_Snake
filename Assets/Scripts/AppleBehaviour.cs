@@ -8,14 +8,21 @@ public class AppleBehaviour : MonoBehaviour
     private int scoreValue;
     [SerializeField]
     private float lifeLength;
-    public void Die()
+    public void Die(int didPlayerKill)
     {
-        GetComponentInParent<GameHandler>().UpdateScore(scoreValue);
-        Destroy(this.gameObject);
+        switch (didPlayerKill)
+        {
+            case 1:
+                GetComponentInParent<GameHandler>().UpdateScore(scoreValue);
+                Destroy(this.gameObject);
+                break; 
+            default:
+                Destroy(this.gameObject);
+                break;
+        }
     }
-
     private void Start()
     {
-        Invoke("Die", lifeLength);
+        Invoke(nameof(Die), lifeLength);
     }
 }

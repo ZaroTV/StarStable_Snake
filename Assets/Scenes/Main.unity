@@ -171,9 +171,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1daf471b473f6744d9a3df58dd5d019e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodRate: 1
   food: {fileID: 133699241340633336, guid: 8e345d321899ef945bd0a73a7abc7d4a, type: 3}
   canvas: {fileID: 566512150}
-  foodRate: 1
 --- !u!1 &108846494
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,7 +762,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751735771}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: 4, y: 8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -780,8 +780,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3265649080403342aaeb7a8073441d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snakeTail: {fileID: 7213163017336216623, guid: 1ea005c76cf9e7344ba39d834ddcd5a0, type: 3}
-  moveRate: 0.3
+  nextTail: {fileID: 0}
+  tailPref: {fileID: 7213163017336216623, guid: 1ea005c76cf9e7344ba39d834ddcd5a0, type: 3}
+  moveRate: 1
 --- !u!61 &751735775
 BoxCollider2D:
   m_ObjectHideFlags: 0

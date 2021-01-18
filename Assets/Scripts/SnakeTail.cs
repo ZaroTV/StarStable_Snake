@@ -4,25 +4,27 @@ using UnityEngine;
 
 public class SnakeTail : MonoBehaviour
 {
+    [SerializeField]
+    public SnakeTail nextTail; // target
 
-    //private GameObject snake;
-    //private Vector2Int tailGridPos;
-    //private Vector2Int tailGridDir;
-    //public int tailID;
+    [SerializeField]
+    private GameObject tailPref;
 
-    //private void Awake()
-    //{
-    //    snake = this.gameObject.GetComponentInParent<Snake>().gameObject;
-    //    tailID = snake.GetComponentInParent<Snake>().snakeSize;
-    //    InvokeRepeating("MoveTail", 0.1f, snake.GetComponent<Snake>().moveRate);
-    //}
+    protected void Move(Vector3 newPos)
+    {
+        if(nextTail != null)
+            nextTail.Move(this.transform.position);
+        this.transform.position = newPos;
+    }
 
-    //private void MoveTail()
-    //{
-    //    tailGridDir = snake.GetComponent<Snake>().snakePrevPosList[tailID];
+    protected void SetNextTail(SnakeTail newTail)
+    {
+        nextTail = newTail;
+    }
 
-    //    tailGridPos += tailGridDir;
-
-    //    transform.position = new Vector3(tailGridPos.x, tailGridPos.y);
-    //}
+    protected void SpawnTail()
+    {
+        Instantiate(tailPref, this.transform.position -= Vector3.forward, Quaternion.identity);
+        //tailPref.GetComponent<SnakeTail>().SetNextTail(this.gameObject.GetComponent<SnakeTail>()); // prefab target 
+    }
 }
