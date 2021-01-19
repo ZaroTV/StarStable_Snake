@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameHandler : MonoBehaviour
 {
-
     private Vector2Int foodGridPos;
     private int width;
     private int height;
@@ -15,7 +14,6 @@ public class GameHandler : MonoBehaviour
     private GameObject food;
     [SerializeField]
     private Canvas canvas;
-
     private void Start()
     {
         width = 20;

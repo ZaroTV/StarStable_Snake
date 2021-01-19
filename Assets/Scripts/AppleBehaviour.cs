@@ -21,8 +21,12 @@ public class AppleBehaviour : MonoBehaviour
                 break;
         }
     }
+    private void NaturalDie()
+    {
+        Die(0);
+    }
     private void Start()
     {
-        Invoke(nameof(Die), lifeLength);
+        Invoke(nameof(NaturalDie), lifeLength);
     }
 }
