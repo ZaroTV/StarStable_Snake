@@ -124,3 +124,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreValue: 100
   lifeLength: 5
+  audioPlayer: {fileID: 0}
+  pickUpSound: {fileID: 8300000, guid: f9de128d4ad67ed48ba152657911060d, type: 3}

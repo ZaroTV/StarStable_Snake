@@ -8,6 +8,8 @@ public class AppleBehaviour : MonoBehaviour
     private int scoreValue;
     [SerializeField]
     private float lifeLength;
+
+
     public void Die(int didPlayerKill)
     {
         switch (didPlayerKill)

@@ -52,6 +52,33 @@ public class Snake : SnakeTail
             this.transform.eulerAngles = new Vector3(0, 0, -90);
         }
     }
+    //private void Update()
+    //{
+    //    if (Input.GetKey(KeyCode.W))
+    //    {
+    //        TryRotateTo(DIRECTION_UP);
+    //    }
+    //    if (Input.GetKey(KeyCode.A))
+    //    {
+    //        TryRotateTo(DIRECTION_LEFT);
+    //    }
+    //    if (Input.GetKey(KeyCode.S))
+    //    {
+    //        TryRotateTo(DIRECTION_DOWN);
+    //    }
+    //    if (Input.GetKey(KeyCode.D))
+    //    {
+    //        TryRotateTo(DIRECTION_RIGHT);
+    //    }
+    //}
+
+    //private void TryRotateTo(Quaternion rot)
+    //{
+    //    if (Quaternion.Dot(this.transform.rotation, rot) >= 0f)
+    //    {
+    //        this.transform.rotation = rot;
+    //    }
+    //}
 
     private void OnTriggerEnter2D(Collider2D col)
     {
